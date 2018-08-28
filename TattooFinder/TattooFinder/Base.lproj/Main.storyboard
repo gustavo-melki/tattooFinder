@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TattooFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-Fs-PBT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pb-0o-Jzs" customClass="GradientView" customModule="TattooFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="htk-ud-teo">
+                                <rect key="frame" x="0.0" y="328.5" width="375" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="wcF-9R-7aI"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="4Mn-qY-6FW" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="XDo-k0-eUn" customClass="TattooerCollectionViewCell" customModule="TattooFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-ue-rjD">
+                                                    <rect key="frame" x="10" y="12" width="70" height="70"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="VDg-a7-PYX"/>
+                                                        <constraint firstAttribute="height" constant="70" id="WXt-f4-gUf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1Js-M2-Cad">
+                                                    <rect key="frame" x="90" y="19" width="267" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrD-nj-Ry4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="181" height="30.5"/>
+                                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="24"/>
+                                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade - UF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-LB-FgC">
+                                                            <rect key="frame" x="0.0" y="34.5" width="94.5" height="21.5"/>
+                                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="1Js-M2-Cad" firstAttribute="centerY" secondItem="XDo-k0-eUn" secondAttribute="centerY" id="Jr9-7l-jx7"/>
+                                            <constraint firstItem="1Js-M2-Cad" firstAttribute="leading" secondItem="QXg-ue-rjD" secondAttribute="trailing" constant="10" id="bHn-Sa-3TM"/>
+                                            <constraint firstItem="QXg-ue-rjD" firstAttribute="centerY" secondItem="XDo-k0-eUn" secondAttribute="centerY" id="pn0-yO-X37"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="1Js-M2-Cad" secondAttribute="trailing" constant="10" id="qSi-JQ-kTy"/>
+                                            <constraint firstItem="QXg-ue-rjD" firstAttribute="leading" secondItem="XDo-k0-eUn" secondAttribute="leading" constant="10" id="wwH-E3-zUr"/>
+                                        </constraints>
+                                        <size key="customSize" width="375" height="94"/>
+                                        <connections>
+                                            <outlet property="artistName" destination="CrD-nj-Ry4" id="KdH-AN-mEn"/>
+                                            <outlet property="shortAddress" destination="8pi-LB-FgC" id="NL0-6x-vfg"/>
+                                            <outlet property="tattooerImage" destination="QXg-ue-rjD" id="uZ7-b1-Qdc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5xB-9W-ldc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Hyb-dE-yvo"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9pb-0o-Jzs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5HQ-uR-XcB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="htk-ud-teo" secondAttribute="trailing" id="Evd-P1-1ta"/>
+                            <constraint firstItem="IOc-Fs-PBT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="MAb-ex-2PU"/>
+                            <constraint firstItem="IOc-Fs-PBT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ogc-g2-5Rr"/>
+                            <constraint firstItem="9pb-0o-Jzs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RE8-ul-sd9"/>
+                            <constraint firstItem="htk-ud-teo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yev-xR-c8u"/>
+                            <constraint firstItem="htk-ud-teo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZnA-kA-Jch"/>
+                            <constraint firstItem="9pb-0o-Jzs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eCP-nA-N2m"/>
+                            <constraint firstItem="htk-ud-teo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="ePl-MZ-S5s"/>
+                            <constraint firstItem="9pb-0o-Jzs" firstAttribute="width" secondItem="IOc-Fs-PBT" secondAttribute="width" id="eyF-80-Sus"/>
+                            <constraint firstItem="9pb-0o-Jzs" firstAttribute="height" secondItem="IOc-Fs-PBT" secondAttribute="height" id="kXy-eL-cRu"/>
+                            <constraint firstItem="IOc-Fs-PBT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oob-2Z-kOu"/>
+                            <constraint firstItem="IOc-Fs-PBT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v9K-7J-xAA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="htk-ud-teo" id="qXY-vl-aIq"/>
+                        <outlet property="tattooImageView" destination="IOc-Fs-PBT" id="bca-vu-i4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="90.404797601199405"/>
+        </scene>
+    </scenes>
+</document>

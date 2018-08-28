@@ -1,0 +1,6 @@
+framework module Pods_TattooFinder {
+  umbrella header "Pods-TattooFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
